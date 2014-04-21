@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Techy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="themes/default/public/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="themes/default/public/styles.css">
+    <link rel="stylesheet" href="themes/default/public/prism/prism.css" />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' type='text/css'>
+</head>
+
+<body>
+    <div class="content">
+        <h1 id="aurora-lamp-based-on-arduino">Aurora lamp based on Arduino</h1>
+        <p>I had this idea in mind for a while, but it took me some time to acually do it. My child likes when there is some light in the room. I was thinking about building something which not only will provide light, but will be pretty and fun to watch.
+            The other requirement was to make it automatically switch on when the lights go off. In theory this supposed to take some pressure of that moment. This part was only my wishful thinking. Here is a picture of the projection the lamp makes on
+            the wall. It is not as bright, I needed to use long exposure time.</p>
+        <p>img:1-projection.png</p>
+        <hr>
+        <h2 id="parts">Parts</h2>
+        <ul>
+            <li>Arduino board</li>
+            <li>2 x RGB LEDs</li>
+            <li>6 x 200 Ohms resistors (I should use a different resistance per each color)</li>
+            <li>light sensor</li>
+            <li>10kOhm resistor</li>
+            <li>a box (i.e. package for iPhone 3GS)</li>
+            <li>piece of plastic - old credit/gift card</li>
+            <li>kitchen foil, or anything which will reflect the light</li>
+            <li>software - <a href="https://github.com/zalun/AuroraLamp">https://github.com/zalun/AuroraLamp</a>
+            </li>
+        </ul>
+        <p>img:0-schema.png</p>
+        <hr>
+        <h2 id="assembly">Assembly</h2>
+        <p>There was no need for glue - board and parts fit in iPhone 3GS box perfectly.</p>
+        <p>img:2-construction.png</p>
+        <p>A window is needed to reflect the light on the wall.</p>
+        <p>img:4-box-top.png</p>
+        <p>Some decoration made by my daughter made it a usable product.</p>
+        <p>img:6-happykid.png</p>
+        <hr>
+        <h2 id="tinkering">Tinkering</h2>
+        <p>If you want - just upload the software and all should be fine. But it is designed to make some changes.</p>
+        <p>Lamp switches on when the ambient light level is below the value of <code class="language-javascript">BRIGHT</code>
+        </p>
+        <p><code class="language-javascript">const int BRIGHT = 5;</code>
+        </p>
+        <p>Speed of the calculations is defined in <code class="language-javascript">STEP</code> in milliseconds</p>
+        <p><code class="language-javascript">const int STEP = 5;</code>
+        </p>
+    </div>
+    <script src="themes/default/public/prism/prism.js"></script>
+    <script src="themes/default/public/scripts.js"></script>
+</body>
+
+</html>
