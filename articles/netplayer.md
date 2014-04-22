@@ -1,5 +1,7 @@
 ---
+date: 04-20-2014
 title: NetPlayer based on RaspberryPi
+preface: For some time I was thinking about adding a network player to my audio setup.  I use a turntable for most of the time, but for some use cases it was no good.
 tags:
   - raspberrypi
   - hifiberry
@@ -11,8 +13,8 @@ tags:
 
 ![NetPlayer en face](../img/netplayer/on-shelf-face-1.png)
 
-For some time I was thinking about adding a network player to my audio setup.
-I use a turntable for most of the time, but for some usecases it was no good.
+For some time I was thinking about adding a network player to my audio setup.  
+I use a turntable for most of the time, but for some use cases it was no good.
 Playing background music for programming was no fun. We are also often listen
 to the radio and since I found out that Onkyo A-8860 has a way better sound than
 three times more expensive Denon AV 1710 I had no radio anymore. I was 

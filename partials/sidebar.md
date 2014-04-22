@@ -3,20 +3,19 @@ layout: none
 noSave: true
 ---
 
-<h3>Hacking around</h3>
-
-Piotr Zalewa<br />
+<strong>Hacking around</strong>
+by zalun (Piotr Zalewa)
 
 ---
 
 <small>Latest blog posts:</small><br />
-<% list('partials/article-sidebar.md', 5) %>
+<% list('partials/article-sidebar.md', 2) %>
 
 ---
 
 <small>Tags:</small><br />
-<a href="<% linkto('raspberrypi') %>">RaspberryPi</a>
-<a href="<% linkto('arduino') %>">Arduino</a>
-<a href="<% linkto('hardware') %>">hardware</a>
 <a href="<% linkto('kids') %>">kids</a>
-<a href="<% linkto('programming') %>">Programming</a>
+<a href="<% linkto('arduino') %>">Arduino</a>
+<a href="<% linkto('raspberrypi') %>">RaspberryPi</a>
+<a href="<% linkto('hardware') %>">hardware</a>
+<a href="<% linkto('audio') %>">Audio</a>

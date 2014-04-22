@@ -1,1 +1,1 @@
-<% list(null, 4) %>
+<% list(null, 2) %>

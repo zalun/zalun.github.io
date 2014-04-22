@@ -13,54 +13,84 @@
 
 <body>
     <div class="content">
-        <h1 id="aurora-lamp-based-on-arduino">Aurora lamp based on Arduino</h1>
-        <p>I had this idea in mind for a while, but it took me some time to acually do it. My child likes when there is some light in the room. I was thinking about building something which not only will provide light, but will be pretty and fun to watch.
-            The other requirement was to make it automatically switch on when the lights go off. In theory this supposed to take some pressure of that moment. This part was only my wishful thinking. Here is a picture of the projection the lamp makes on
-            the wall. It is not as bright, I needed to use long exposure time.</p>
-        <p>
-            <img src="../img/aurora_lamp/1-projection.png" alt="result">
-        </p>
-        <hr>
-        <h2 id="parts">Parts</h2>
-        <ul>
-            <li>Arduino board</li>
-            <li>2 x RGB LEDs</li>
-            <li>6 x 200 Ohms resistors (I should use a different resistance per each color)</li>
-            <li>light sensor</li>
-            <li>10kOhm resistor</li>
-            <li>a box (i.e. package for iPhone 3GS)</li>
-            <li>piece of plastic - old credit/gift card</li>
-            <li>kitchen foil, or anything which will reflect the light</li>
-            <li>software - <a href="https://github.com/zalun/AuroraLamp">https://github.com/zalun/AuroraLamp</a>
-            </li>
-        </ul>
-        <p>
-            <img src="../img/aurora_lamp/0-schema.png" alt="board design">
-        </p>
-        <hr>
-        <h2 id="assembly">Assembly</h2>
-        <p>There was no need for glue - board and parts fit in the box perfectly.</p>
-        <p>
-            <img src="../img/aurora_lamp/2-construction.png" alt="open box - view from the top">
-        </p>
-        <p>A window is needed to reflect the light on the wall.</p>
-        <p>
-            <img src="../img/aurora_lamp/4-box-top.jpg" alt="projection window">
-        </p>
-        <p>Some decoration made by my daughter made it a usable product.</p>
-        <p>
-            <img src="../img/aurora_lamp/6-happykid.png" alt="happy kid">
-        </p>
-        <hr>
-        <h2 id="tinkering">Tinkering</h2>
-        <p>If you want - just upload the software and all should be fine. But it is designed to make some changes.</p>
-        <p>Lamp switches on when the ambient light level is below the value of <code class="language-javascript">BRIGHT</code>
-        </p>
-        <p><code class="language-javascript">const int BRIGHT = 5;</code>
-        </p>
-        <p>Speed of the calculations is defined in <code class="language-javascript">STEP</code> in milliseconds</p>
-        <p><code class="language-javascript">const int STEP = 5;</code>
-        </p>
+        <div class="row">
+            <div class="col-main">
+                <h1 id="aurora-lamp-based-on-arduino">Aurora lamp based on Arduino</h1>
+                <p>I had this idea in mind for a while, but it took me some time to acually do it. My child likes when there is some light in the room. I was thinking about building something which not only will provide light, but will be pretty and fun
+                    to watch. The other requirement was to make it automatically switch on when the lights go off. In theory this supposed to take some pressure of that moment. This part was only my wishful thinking. Here is a picture of the projection
+                    the lamp makes on the wall. It is not as bright, I needed to use long exposure time.</p>
+                <p>
+                    <img src="../img/aurora_lamp/1-projection.png" alt="result">
+                </p>
+                <hr>
+                <h2 id="parts">Parts</h2>
+                <ul>
+                    <li>Arduino board</li>
+                    <li>2 x RGB LEDs</li>
+                    <li>6 x 200 Ohms resistors (I should use a different resistance per each color)</li>
+                    <li>light sensor</li>
+                    <li>10kOhm resistor</li>
+                    <li>a box (i.e. package for iPhone 3GS)</li>
+                    <li>piece of plastic - old credit/gift card</li>
+                    <li>kitchen foil, or anything which will reflect the light</li>
+                    <li>software - <a href="https://github.com/zalun/AuroraLamp">https://github.com/zalun/AuroraLamp</a>
+                    </li>
+                </ul>
+                <p>
+                    <img src="../img/aurora_lamp/0-schema.png" alt="board design">
+                </p>
+                <hr>
+                <h2 id="assembly">Assembly</h2>
+                <p>There was no need for glue - board and parts fit in the box perfectly.</p>
+                <p>
+                    <img src="../img/aurora_lamp/2-construction.png" alt="open box - view from the top">
+                </p>
+                <p>A window is needed to reflect the light on the wall.</p>
+                <p>
+                    <img src="../img/aurora_lamp/4-box-top.jpg" alt="projection window">
+                </p>
+                <p>Some decoration made by my daughter made it a usable product.</p>
+                <p>
+                    <img src="../img/aurora_lamp/6-happykid.png" alt="happy kid">
+                </p>
+                <hr>
+                <h2 id="tinkering">Tinkering</h2>
+                <p>If you want - just upload the software and all should be fine. But it is designed to make some changes.</p>
+                <p>Lamp switches on when the ambient light level is below the value of <code class="language-javascript">BRIGHT</code>
+                </p>
+                <p><code class="language-javascript">const int BRIGHT = 5;</code>
+                </p>
+                <p>Speed of the calculations is defined in <code class="language-javascript">STEP</code> in milliseconds</p>
+                <p><code class="language-javascript">const int STEP = 5;</code>
+                </p>
+            </div>
+            <div class="col-sidebar">
+                <p><strong>Hacking around</strong>
+                    by zalun (Piotr Zalewa)</p>
+                <hr>
+                <p><small>Latest blog posts:</small>
+                    <br />
+                    <p><a href="./articles/auroralamp.html"><i class="fa fa-check"></i> Aurora lamp based on Arduino</a>
+                    </p>
+                    <p><a href="./articles/netplayer.html"><i class="fa fa-check"></i> NetPlayer based on RaspberryPi</a>
+                    </p>
+                </p>
+                <hr>
+                <p><small>Tags:</small>
+                    <br />
+                    <a href="./tags/kids.html">kids</a>
+                    <a href="./tags/arduino.html">Arduino</a>
+                    <a href="./tags/raspberrypi.html">RaspberryPi</a>
+                    <a href="./tags/hardware.html">hardware</a>
+                    <a href="./tags/audio.html">Audio</a>
+                </p>
+            </div>
+        </div>
+        <footer>
+            <p><a href="./"><i class="fa fa-home"></i> Home</a>
+                <a href="./all.html"><i class="fa fa-list-ul"></i> All articles</a>
+            </p>
+        </footer>
     </div>
     <script src="./themes/default/public/prism/prism.js"></script>
     <script src="./themes/default/public/scripts.js"></script>

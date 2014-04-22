@@ -1,5 +1,7 @@
 ---
+date: 04-21-2014
 title: Aurora lamp based on Arduino
+preface: I had this idea in mind for a while, but it took me some time to acually do it.  My child likes when there is some light in the room. I was thinking about building something which not only will provide light, but will be pretty and fun to watch. The other requirement was to make it automatically switch on when the lights go off. In theory this supposed to take some pressure of that moment. This part was only my wishful thinking...
 tags:
   - arduino
   - hardware
@@ -8,12 +10,7 @@ tags:
 
 # Aurora lamp based on Arduino
 
-I had this idea in mind for a while, but it took me some time to acually do it.
-My child likes when there is some light in the room. I was thinking about 
-building something which not only will provide light, but will be pretty and
-fun to watch. The other requirement was to make it automatically switch on
-when the lights go off. In theory this supposed to take some pressure of
-that moment. This part was only my wishful thinking. Here is a picture of the
+I had this idea in mind for a while, but it took me some time to acually do it.  My child likes when there is some light in the room. I was thinking about building something which not only will provide light, but will be pretty and fun to watch. The other requirement was to make it automatically switch on when the lights go off. In theory this supposed to take some pressure of that moment. This part was only my wishful thinking. Here is a picture of the
 projection the lamp makes on the wall. It is not as bright, I needed to use
 long exposure time.
 
