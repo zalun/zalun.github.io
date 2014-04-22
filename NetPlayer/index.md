@@ -58,13 +58,14 @@ run ssh and ``halt`` it from the terminal.
 ### Stop
 
 This is stop and restart button. I stop all clients and restart ``shairport``.
-I wanted it that way to be sure everything has stopped playing.
+I wanted it that way to be sure everything has stopped playing even if it
+wasn't run by pressing a button.
 
 ### Radio
 
-Stations are defined in ``settings.py``. Depending on the current state button
-is either switching lates played station or switching to the next one on the 
-list.
+Stations are defined in ``settings.py``. Depending on the current state pressing 
+the button is either switching lates played station or switching to the next 
+one on the list.
 
 ### Music
 
@@ -93,8 +94,8 @@ idea to add display (LED or OLED).
 
 ![RCA](img/open-4-back.png)
 
-First I've designed the device using a prototypy board. As it worked well
-for a week or so I ordered the boxes.
+First I've designed the device using a prototype board. After it worked well
+for a week or so, I've ordered the boxes.
 
 ![Prototype board](img/prototype-board-1.png)
 
