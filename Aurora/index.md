@@ -1,4 +1,6 @@
-:title:Aurora lamp based on Arduino
+---
+title: Aurora lamp based on Arduino
+---
 
 # Aurora lamp based on Arduino
 
@@ -11,7 +13,7 @@ that moment. This part was only my wishful thinking. Here is a picture of the
 projection the lamp makes on the wall. It is not as bright, I needed to use
 long exposure time.
 
-img:img/1-projection.png
+![result](img/1-projection.png)
 
 ---
 
@@ -27,7 +29,7 @@ img:img/1-projection.png
 * kitchen foil, or anything which will reflect the light
 * software - https://github.com/zalun/AuroraLamp
 
-img:img/0-schema.png
+![board design](img/0-schema.png)
 
 ---
 
@@ -35,15 +37,15 @@ img:img/0-schema.png
 
 There was no need for glue - board and parts fit in the box perfectly.
 
-img:img/2-construction.png
+![open box - view from the top](img/2-construction.png)
 
 A window is needed to reflect the light on the wall.
 
-img:img/4-box-top.png
+![projection window](img/4-box-top.jpg)
 
 Some decoration made by my daughter made it a usable product.
 
-img:img/6-happykid.png
+![happy kid](img/6-happykid.png)
 
 ---
 
