@@ -1,3 +1,5 @@
+:title:Aurora lamp based on Arduino
+
 # Aurora lamp based on Arduino
 
 I had this idea in mind for a while, but it took me some time to acually do it.
@@ -9,7 +11,7 @@ that moment. This part was only my wishful thinking. Here is a picture of the
 projection the lamp makes on the wall. It is not as bright, I needed to use
 long exposure time.
 
-img:1-projection.png
+img:img/1-projection.png
 
 ---
 
@@ -25,23 +27,23 @@ img:1-projection.png
 * kitchen foil, or anything which will reflect the light
 * software - https://github.com/zalun/AuroraLamp
 
-img:0-schema.png
+img:img/0-schema.png
 
 ---
 
 ## Assembly
 
-There was no need for glue - board and parts fit in iPhone 3GS box perfectly.
+There was no need for glue - board and parts fit in the box perfectly.
 
-img:2-construction.png
+img:img/2-construction.png
 
 A window is needed to reflect the light on the wall.
 
-img:4-box-top.png
+img:img/4-box-top.png
 
 Some decoration made by my daughter made it a usable product.
 
-img:6-happykid.png
+img:img/6-happykid.png
 
 ---
 
