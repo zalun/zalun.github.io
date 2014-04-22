@@ -1,5 +1,5 @@
 ---
-title: NetPlayer based on RaspberryPi')
+title: NetPlayer based on RaspberryPi
 ---
 
 # Network player based on RaspberryPi and Hifiberry
