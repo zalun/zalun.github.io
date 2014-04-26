@@ -62,7 +62,7 @@
                 <p>
                     <img src="../img/netplayer/open-4-back.png" alt="RCA">
                 </p>
-                <p>First I've designed the device using a prototype board. After it worked well for a week or so, I've ordered the boxes.</p>
+                <p>First I've designed the device using a prototype board. After it worked well for a week or so, I've ordered the boxes (I bought the cheapest from <a href="http://modushop.pl/" target="_blank">Modushop</a> for about &pound;10 each).</p>
                 <p>
                     <img src="../img/netplayer/prototype-board-1.png" alt="Prototype board">
                 </p>
@@ -70,6 +70,38 @@
                 <p>
                     <img src="../img/netplayer/on-shelf-face-2.png" alt="On shelf">
                 </p>
+                <hr>
+                <h2 id="software-installation">Software installation</h2>
+                <ul>
+                    <li><a href="http://www.hifiberry.com/guides/setting-up-volumio-to-get-great-audio/" target="_blank">Volumio</a> (contains Hifiberry hardware building information)</li>
+                    <li>
+                        <p>Mplayer</p>
+                        <p><code class="language-javascript">sudo apt-get install mplayer</code> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>Git</p>
+                        <p><code class="language-javascript">sudo apt-get install git git-client</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Install Python</p>
+                        <p><code class="language-javascript">sudo apt-get install python-pip python-dev build-essential
+sudo pip install --upgrade pip 
+sudo pip install -g RPi.GPIO</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Listen to buttons</p>
+                        <p><code class="language-javascript">cd ~volumio
+git clone git@github.com:zalun/NetPlayer.git</code>
+                        </p>
+                        <p>To run the listener one needs to call</p>
+                        <p><code class="language-javascript">cd ~volumio
+sudo python -m NetPlayer.listen</code>
+                        </p>
+                    </li>
+                </ul>
             </div>
             <div class="col-sidebar">
                 <p><a href="./../"><strong>Hacking around</strong></a>

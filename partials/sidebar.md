@@ -9,7 +9,7 @@ by zalun
 ---
 
 <small>Latest blog posts:</small><br />
-<% list('partials/article-sidebar.md', 2) %>
+<% list('partials/article-sidebar.md', 3) %>
 
 ---
 

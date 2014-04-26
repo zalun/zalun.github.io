@@ -45,15 +45,11 @@ If this works for you as well feel free to download the software from https://gi
 
 ### Stop
 
-This is stop and restart button. I stop all clients and restart ``shairport``.
-I wanted it that way to be sure everything has stopped playing even if it
-wasn't run by pressing a button.
+This is stop and restart button. I stop all clients and restart ``shairport``.  I wanted it that way to be sure everything has stopped playing even if it wasn't run by pressing a button.
 
 ### Radio
 
-Stations are defined in ``settings.py``. Depending on the current state pressing 
-the button is either switching lates played station or switching to the next 
-one on the list.
+Stations are defined in ``settings.py``. Depending on the current state pressing the button is either switching lates played station or switching to the next one on the list.
 
 ### Music
 
@@ -63,8 +59,7 @@ Note: One needs to create a playlist using an MPD client on a different device.
 
 ### Test
 
-Files are read from the directory specified in ``settings.py``. Again - Play
-current song or switch to the next one.
+Files are read from the directory specified in ``settings.py``. Again - Play current song or switch to the next one.
 
 ---
 
@@ -72,21 +67,44 @@ current song or switch to the next one.
 
 ![Prototype board](../img/netplayer/board.png)
 
-Hearing that the standard impulse power source isn't good for sound I bought
-a good quality assembled DIY power source. I've placed it in a separate box as
-I might use it to power another device. The NetPlayer has power input and RCA
-output. It connects to the network using WiFi USB dongle. All music files are
-copied to the Synology NAS. Boxes used aren't pretty yet, also the buttons are
-temporary. I want to design front panel with wooded buttons. There is also an 
-idea to add display (LED or OLED).
+Hearing that the standard impulse power source isn't good for sound I bought a good quality assembled DIY power source. I've placed it in a separate box as I might use it to power another device. The NetPlayer has power input and RCA output. It connects to the network using WiFi USB dongle. All music files are copied to the Synology NAS. Boxes used aren't pretty yet, also the buttons are temporary. I want to design front panel with wooded buttons. There is also an idea to add display (LED or OLED).
 
 ![RCA](../img/netplayer/open-4-back.png)
 
-First I've designed the device using a prototype board. After it worked well
-for a week or so, I've ordered the boxes.
+First I've designed the device using a prototype board. After it worked well for a week or so, I've ordered the boxes (I bought the cheapest from <a href="http://modushop.pl/" target="_blank">Modushop</a> for about &pound;10 each).
 
 ![Prototype board](../img/netplayer/prototype-board-1.png)
 
 It does look well on the shelf even with the current design.
 
 ![On shelf](../img/netplayer/on-shelf-face-2.png)
+
+
+---
+
+## Software installation
+
+* <a href="http://www.hifiberry.com/guides/setting-up-volumio-to-get-great-audio/" target="_blank">Volumio</a> (contains Hifiberry hardware building information)
+* Mplayer 
+
+  ```sudo apt-get install mplayer``` 
+
+* Git 
+
+  ```sudo apt-get install git git-client```
+
+* Install Python
+
+  ```sudo apt-get install python-pip python-dev build-essential
+sudo pip install --upgrade pip 
+sudo pip install -g RPi.GPIO```
+
+* Listen to buttons 
+
+  ```cd ~volumio
+git clone git@github.com:zalun/NetPlayer.git ```
+
+  To run the listener one needs to call 
+
+  ```cd ~volumio
+sudo python -m NetPlayer.listen```

@@ -11,7 +11,8 @@ module.exports = function(api) {
 			}
 		},
 		'pre': {
-			'-wm-bxsh': '0 0 2px 1px #ccc'
+      fz: '14px'
+			//'-wm-bxsh': '0 0 2px 1px #ccc'
 		},
 	});
 }

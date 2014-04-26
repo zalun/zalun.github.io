@@ -18,7 +18,7 @@ module.exports = function(api) {
 		footer: {
 			mar: '40px 0 40px 0',
 			bdt: 'dotted 1px #999',
-			ta: 'c',
+			ta: 'l',
 			a: {
 				d: 'ib',
 				mar: '0 14px 0 0'
