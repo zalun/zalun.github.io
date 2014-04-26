@@ -3,7 +3,7 @@ layout: none
 noSave: true
 ---
 
-<strong>Hacking around</strong>
+<a href="<% get('paths').root %>"><i class="fa fa-home"><strong>Hacking around</strong></i></a>
 by zalun (Piotr Zalewa)
 
 ---
