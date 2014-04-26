@@ -3,7 +3,7 @@ noSave: true
 layout: none
 ---
 
-## <% get('title') %>
+## <a href="<% get('link') %>"><% get('title') %></a>
 
 <small>Published on <% get('date') %>, Tags: <% get('tags') %></small>
 
