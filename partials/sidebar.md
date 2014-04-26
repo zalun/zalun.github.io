@@ -3,8 +3,8 @@ layout: none
 noSave: true
 ---
 
-<a href="<% get('paths').root %>"><i class="fa fa-home"><strong>Hacking around</strong></i></a>
-by zalun (Piotr Zalewa)
+<a href="<% get('paths').root %>"><strong>Hacking around</strong></a>
+by zalun
 
 ---
 

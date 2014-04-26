@@ -11,56 +11,37 @@ tags:
 
 ## Network player based on RaspberryPi and Hifiberry
 
-![NetPlayer en face](../img/netplayer/on-shelf-face-1.png)
+![NetPlayer en face](../img/netplayer/on-shelf-face-4.png)
 
-For some time I was thinking about adding a network player to my audio setup.  
-I use a turntable for most of the time, but for some use cases it was no good.
-Playing background music for programming was no fun. We are also often listen
-to the radio and since I found out that Onkyo A-8860 has a way better sound than
-three times more expensive Denon AV 1710 I had no radio anymore. I was 
-considering buying Mac Mini, but the price is way too high even for the used
-devices. I checked for external DACs for RaspberryPi, but there were (are?) 
-issues with IO on rPi. Then in December I found Hifiberry - a DAC which is
-connected directly to the I2S slot in RaspberryPi. Exactly what I was looking 
-for. Non expensive, high quality DIY device. There was some soldering involved 
-as I wanted RCA slots in different place and RaspberryPi has no pins in I2S slot.
+I use a turntable for most of the time, but sometimes it wasn't best for the job.  getting up every 20 minutes to play music while working was no fun.  Another need was an internet radio. I was considering buying Mac Mini, but the price is way too high even for the used devices. I researched external DACs for RaspberryPi, but there was (is?) issue with IO on rPi. Then I found <a href="http://www.hifiberry.com/" target="_blank">Hifiberry</a> - a DAC which is connected directly to the I2S slot in RaspberryPi.  Exactly what I was looking for. Non expensive, high quality DIY device. There was some soldering involved as I wanted RCA slots in different place and RaspberryPi has no pins in I2S slot.
 
 ---
 
 ## Requirements
 
-### Plays music
+### Plays from a playlist
 
-After some research on Linux distribution I have chosen Volumio as it uses MPD 
-and is advertising as audiophile weapon. It is also working with 
-Hifiberry with almost no changes. I was surprised it runs ``shairport`` which 
-allows to stream from any Apple device.
+After some research on Linux distribution I have chosen <a href="http://volumio.org/" target="_blank">Volumio</a> as it uses <a href="http://www.musicpd.org/" target="_blank">MPD</a> and is advertising as audiophile weapon. Volumio is also working with Hifiberry with almost no changes. It was a pleasent surprise finding it runing ``shairport`` to stream from Apple devices.
 
-### Radio Player
+### Plays Internet Radio
 
-I often listen to "Trójka" Polish radio station. Unfortunately it uses some
-strange codec and is not working under MPD. I decided to use Mplayer to play
-internet radio.
+I often listen to "Trójka" Polish radio station. Unfortunately it uses some strange codec and is not working under MPD. I decided to use Mplayer to play internet radio.
 
-### Test files
+### Plays music test files
 
-What's the fun of owning a DIY network player if one can't take it and test how
-it sound on your friend's system? I have some space on SD where I copied few
-files. No need to connect to the probably unsafe local network.
+What's the fun of owning a DIY network player if one can't take it and test how it sound on your friend's system? I have some space on SD where I copied few files. No need to connect to the probably unsafe local network.
 
 ---
 
 ## Logic
 
-Device has four buttons. Stop / Radio / Music / Test
-
-If this logic works for you as well feel free to download the software from
-https://github.com/zalun/NetPlayer
-
 ![buttons](../img/netplayer/buttons.png)
 
-I made a choice to not switch off the device on a usual basis, I can always
-run ssh and ``halt`` it from the terminal.
+Device has four buttons. ``stop`` / ``radio`` / ``music`` / ``test``
+
+If this works for you as well feel free to download the software from https://github.com/zalun/NetPlayer
+
+<blockquote>I've made a choice to not switch off the device on a usual basis, I can always run <i>ssh</i> and <i>halt</i> it from the terminal. This however might change in the future, I consider adding a button on the back panel</blockquote>
 
 ### Stop
 
