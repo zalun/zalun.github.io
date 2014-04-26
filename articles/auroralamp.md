@@ -1,7 +1,7 @@
 ---
 date: 04-21-2014
 title: Aurora lamp based on Arduino
-preface: My child likes when there is some light in the room. I wanted something which not only will provide light, but will be pretty and fun to watch...  <img src="img/aurora_lamp/home-projection.png" alt="Aurora projection"/>
+preface: <img src="img/aurora_lamp/home-projection.png" alt="Aurora projection"/><br/>My child likes when there is some light in the room. I wanted something which not only will provide light, but will be pretty and fun to watch...  
 tags:
   - arduino
   - hardware

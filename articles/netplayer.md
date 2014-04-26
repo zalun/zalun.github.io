@@ -1,7 +1,7 @@
 ---
 date: 04-20-2014
 title: NetPlayer based on RaspberryPi
-preface: For some time I was thinking about adding a network player to my audio setup.  I use a turntable for most of the time, but for some use cases it was no good. <img src="img/netplayer/home-player.png" alt="netplayer on the shelf"/>
+preface: <img src="img/netplayer/home-player.png" alt="netplayer on the shelf"/><br/>For some time I was thinking about adding a network player to my audio setup.  I use a turntable for most of the time, but for some use cases it was no good. 
 tags:
   - raspberrypi
   - hifiberry
