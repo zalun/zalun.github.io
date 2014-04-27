@@ -1,8 +1,7 @@
 ---
-date: 04-26-2014
 title: Piano stairs
 preface: Playing stairs
-draft: no
+date: 27-04-2010
 tags: 
   - audio
   - kids

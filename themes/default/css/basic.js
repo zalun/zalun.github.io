@@ -25,7 +25,11 @@ module.exports = function(api) {
 			},
 			'@media all and (max-width: 600px)': {
 				pad: '0 20px 0 20px'
-			}
+			},
+      '.techy': {
+        fz: '14px',
+        ta: 'r'
+      },
 		},
 		'.content': {
 			bg: '#FFF',
