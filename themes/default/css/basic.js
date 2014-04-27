@@ -63,10 +63,20 @@ module.exports = function(api) {
 					small: {
 						color: '#929292'
 					},
-					a: {
-						d: 'b',
-						bdb: 'n'
-					}
+          a: {
+            bdb: 'n'
+          },
+          '.tags': {
+            a: {
+              d: 'b',
+            }
+          },
+          '.discussion': {
+            color: '#eee',
+            small: {
+              color: '#eee',
+            }
+          }
 				},
 				'@media all and (max-width: 600px)': {
 					'& .col-main, & .col-sidebar': {

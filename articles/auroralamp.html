@@ -19,82 +19,97 @@
                 <p>
                     <img src="../img/aurora_lamp/1-projection.png" alt="result">
                 </p>
-                <p>I had this idea in mind for a while, but it took me some time to acually do it. My child likes when there the room is lit a little during the night. I was thinking about building something which not only will provide light, but will be
-                    pretty and constantly changing which would made it fun to watch. The other requirement was to make it automatically switch on when the lights go off. In theory this supposed to take some pressure of that moment. Unfortunately his part
-                    was only my wishful thinking.</p>
-                <p>Lamp independently changes intensity of red, green and blue colors of both LEDs, using the sine function to ease the light changes near the limiting values.</p>
+                <p>I had this idea in mind for a while, but it took me some time to find the right solution. My child is happier when the room is slightly lit during the night. I wanted to build something which will not only provide light, but also be pretty
+                    and fun to watch. The other requirement was to make the lamp automatically switch on when the lights go off. In theory this supposed to make her enjoying that moment. Unfortunately this part was only my wishful thinking.</p>
+                <p>Lamp independently changes intensity of all base colors (red, green and blue) of both LEDs, using the sine function to ease the light changes near the limiting values.</p>
                 <hr>
                 <h2 id="parts">Parts</h2>
-                <ul>
-                    <li>Arduino board</li>
-                    <li>2 x RGB LEDs</li>
-                    <li>6 x 200 Ohms resistors (I should use a different resistance per each color)</li>
-                    <li>light sensor</li>
-                    <li>10kOhm resistor</li>
-                    <li>a box (i.e. package for iPhone 3GS)</li>
-                    <li>piece of plastic - old credit/gift card</li>
-                    <li>kitchen foil, or anything which will reflect the light</li>
-                    <li>software - <a href="https://github.com/zalun/AuroraLamp">https://github.com/zalun/AuroraLamp</a>
-                    </li>
-                </ul>
                 <p>
                     <img src="../img/aurora_lamp/0-schema.png" alt="board design">
                 </p>
+                <ul>
+                    <li>Arduino board</li>
+                    <li>2 x RGB LEDs</li>
+                    <li>6 x 200 Ohms resistors (read about the right resistors for each color)</li>
+                    <li>light sensor</li>
+                    <li>10kOhm resistor</li>
+                    <li>a box (in this case - old iPhone 3GS packaging)</li>
+                    <li>piece of plastic - old credit/gift card</li>
+                    <li>kitchen foil</li>
+                    <li>software - <a href="https://github.com/zalun/AuroraLamp">https://github.com/zalun/AuroraLamp</a>
+                    </li>
+                </ul>
                 <hr>
                 <h2 id="assembly">Assembly</h2>
-                <p>There was no need for glue - board and parts fit in the box perfectly. I've cut a piece of old hotel card which was slighty wider than the box. I covered it with a kitchen foil to form a mirror. This doesn't have to be perfect, it's even
-                    better if there are some distortions. Then I formed a bow and placed inside the box.</p>
+                <p>I started with soldering the resistors to all color LEDs and the light sensor. Then after testing on prototype board, I've removed everything from the box and put on the side. Then I've checked how Arduino fits, and cut the holes for the
+                    power source (I'm using USB port). I've placed the LEDs so they will throw light towards the Arduino and used one piece removed from the box to hold them in place. There was no need for glue - board and parts fit in the box perfectly.
+                    I've cut a piece of old hotel card to make it slighty wider than the box. Then I've covered it with a kitchen foil to form a mirror. Reflection shouldn't be perfect, it's better if there are some distortions. Then I've bend the mirror
+                    to form a bow and placed it firmly inside the box.</p>
                 <p>
                     <img src="../img/aurora_lamp/2-construction.png" alt="open box - view from the top">
                 </p>
-                <p>A window needs to be cut to project the reflected light on the wall.</p>
+                <p>Reflected light is projected on to the wall through a small window.</p>
                 <p>
                     <img src="../img/aurora_lamp/4-box-top.jpg" alt="projection window">
                 </p>
-                <p>Some decoration made by the target audience made a usable product from the prototype.</p>
+                <p>Some decoration created by the target audience made a usable product from the prototype.</p>
                 <p>
                     <img src="../img/aurora_lamp/6-happykid.png" alt="happy kid">
                 </p>
                 <hr>
-                <h2 id="tinkering">Tinkering</h2>
-                <p>If you want - just upload the software and all should be fine. But it is designed to make some changes.</p>
-                <p>Lamp switches on when the ambient light level is below the value of <code class="language-javascript">BRIGHT</code>
+                <h2 id="software">Software</h2>
+                <p>Download the program from GitHub</p>
+                <p><code class="language-javascript">git clone git@github.com:zalun/AuroraLamp.git</code>
                 </p>
+                <p>Upload the file to Arduino device and all should be fine. But there are at least two things one could easily fiddle with.</p>
+                <p>Lamp switches on when the ambient light level is below the value of <code class="language-javascript">BRIGHT</code> which might be different depending on the area (street lamps).</p>
                 <p><code class="language-javascript">const int BRIGHT = 5;</code>
                 </p>
-                <p>Speed of the calculations is defined in <code class="language-javascript">STEP</code> in milliseconds</p>
+                <p>Light intensity is calculated every <code class="language-javascript">STEP</code> milliseconds. The lower the number the quicker the animation.</p>
                 <p><code class="language-javascript">const int STEP = 5;</code>
                 </p>
             </div>
             <div class="col-sidebar">
-                <p><a href="./../"><strong>Hacking around</strong></a>
-                    by zalun</p>
+                <section class="about">
+                    <a href="./../"><strong>Hacking around</strong></a>
+                    by zalun <a href="https://twitter.com/zalun">t</a>  <a href="https://facebook.com/zaloon">f</a>
+                </section>
+
                 <hr>
-                <p><small>Latest blog posts:</small>
+                <section class="latest_posts">
+                    <small>Latest blog posts:</small>
                     <br />
                     <p><a href="./../articles/auroralamp.html"><i class="fa fa-check"></i> Aurora lamp based on Arduino</a>
                     </p>
                     <p><a href="./../articles/netplayer.html"><i class="fa fa-check"></i> NetPlayer based on RaspberryPi</a>
                     </p>
-                    <p><a href="./../articles/pianostairs.html"><i class="fa fa-check"></i> Piano stairs</a>
-                    </p>
-                </p>
+
+                </section>
+
                 <hr>
-                <p><small>Tags:</small>
+                <section class="discussion">
+                    <small>Internet trail</small>
+                    Not supported yet
+                </section>
+
+
+                <hr>
+                <section class="tags">
+                    <small>Tags:</small>
                     <br />
                     <a href="./../tags/kids.html">kids</a>
                     <a href="./../tags/arduino.html">Arduino</a>
                     <a href="./../tags/raspberrypi.html">RaspberryPi</a>
                     <a href="./../tags/hardware.html">hardware</a>
                     <a href="./../tags/audio.html">Audio</a>
-                </p>
+                </section>
             </div>
         </div>
         <footer>
             <p><a href="./../"><i class="fa fa-home"></i> Home</a>
                 <a href="./../all.html"><i class="fa fa-list-ul"></i> All articles</a>
             </p>
-            <p class="techy">Made using <a href="https://github.com/krasimir/techy" target="_blank">techy</a>
+            <p class="techy">Made with <a href="https://github.com/krasimir/techy" target="_blank">techy</a>
             </p>
         </footer>
     </div>

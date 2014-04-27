@@ -1,7 +1,7 @@
 ---
 date: 04-21-2014
 title: Aurora lamp based on Arduino
-preface: <img src="img/aurora_lamp/home-projection.png" alt="Aurora projection"/><br/>Building a hardware emulation of Aurora using Arduino and 2 RGB LEDs. I wanted something which not only will provide light, but will be pretty and fun to watch...  
+preface: <img src="img/aurora_lamp/home-projection.png" alt="Aurora projection"/><br/>Aurora projected on the wall. Switches on automatically when it's dark. Build with Arduino and two RGB LEDs. 
 tags:
   - arduino
   - hardware
@@ -12,52 +12,56 @@ tags:
 
 ![result](../img/aurora_lamp/1-projection.png)
 
-I had this idea in mind for a while, but it took me some time to acually do it.  My child likes when there the room is lit a little during the night. I was thinking about building something which not only will provide light, but will be pretty and constantly changing which would made it fun to watch.  The other requirement was to make it automatically switch on when the lights go off. In theory this supposed to take some pressure of that moment.  Unfortunately his part was only my wishful thinking.  
+I had this idea in mind for a while, but it took me some time to find the right solution. My child is happier when the room is slightly lit during the night. I wanted to build something which will not only provide light, but also be pretty and fun to watch. The other requirement was to make the lamp automatically switch on when the lights go off. In theory this supposed to make her enjoying that moment. Unfortunately this part was only my wishful thinking.  
 
-Lamp independently changes intensity of red, green and blue colors of both LEDs, using the sine function to ease the light changes near the limiting values.
+Lamp independently changes intensity of all base colors (red, green and blue) of both LEDs, using the sine function to ease the light changes near the limiting values.
 
 ---
 
 ## Parts
 
+![board design](../img/aurora_lamp/0-schema.png)
+
 * Arduino board
 * 2 x RGB LEDs
-* 6 x 200 Ohms resistors (I should use a different resistance per each color)
+* 6 x 200 Ohms resistors (read about the right resistors for each color)
 * light sensor
 * 10kOhm resistor
-* a box (i.e. package for iPhone 3GS)
+* a box (in this case - old iPhone 3GS packaging)
 * piece of plastic - old credit/gift card
-* kitchen foil, or anything which will reflect the light
+* kitchen foil
 * software - https://github.com/zalun/AuroraLamp
-
-![board design](../img/aurora_lamp/0-schema.png)
 
 ---
 
 ## Assembly
 
-There was no need for glue - board and parts fit in the box perfectly. I've cut a piece of old hotel card which was slighty wider than the box. I covered it with a kitchen foil to form a mirror.  This doesn't have to be perfect, it's even better if there are some distortions. Then I formed a bow and placed inside the box.
+I started with soldering the resistors to all color LEDs and the light sensor. Then after testing on prototype board, I've removed everything from the box and put on the side. Then I've checked how Arduino fits, and cut the holes for the power source (I'm using USB port). I've placed the LEDs so they will throw light towards the Arduino and used one piece removed from the box to hold them in place. There was no need for glue - board and parts fit in the box perfectly. I've cut a piece of old hotel card to make it slighty wider than the box. Then I've covered it with a kitchen foil to form a mirror. Reflection shouldn't be perfect, it's better if there are some distortions. Then I've bend the mirror to form a bow and placed it firmly inside the box.
 
 ![open box - view from the top](../img/aurora_lamp/2-construction.png)
 
-A window needs to be cut to project the reflected light on the wall.
+Reflected light is projected on to the wall through a small window.
 
 ![projection window](../img/aurora_lamp/4-box-top.jpg)
 
-Some decoration made by the target audience made a usable product from the prototype.
+Some decoration created by the target audience made a usable product from the prototype.
 
 ![happy kid](../img/aurora_lamp/6-happykid.png)
 
 ---
 
-## Tinkering
+## Software
 
-If you want - just upload the software and all should be fine. But it is designed to make some changes.
+Download the program from GitHub
 
-Lamp switches on when the ambient light level is below the value of `BRIGHT`
+```git clone git@github.com:zalun/AuroraLamp.git```
+
+Upload the file to Arduino device and all should be fine. But there are at least two things one could easily fiddle with.
+
+Lamp switches on when the ambient light level is below the value of `BRIGHT` which might be different depending on the area (street lamps).
 
 ```const int BRIGHT = 5;```
 
-Speed of the calculations is defined in `STEP` in milliseconds
+Light intensity is calculated every `STEP` milliseconds. The lower the number the quicker the animation.
 
 ```const int STEP = 5;```
