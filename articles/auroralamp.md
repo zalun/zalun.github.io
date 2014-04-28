@@ -12,9 +12,9 @@ tags:
 
 ![result](../img/aurora_lamp/1-projection.png)
 
-I had this idea in mind for a while, but it took me some time to find the right solution. My child is happier when the room is slightly lit during the night. I wanted to build something which will not only provide light, but also be pretty and fun to watch. The other requirement was to make the lamp automatically switch on when the lights go off. In theory this supposed to make her enjoying that moment. Unfortunately this part was only my wishful thinking.  
+I had this idea in mind for a while, but it took me some time to find the right solution. My child is happier when the room is slightly lit during the night. I wanted to build something which will not only provide light, but also be pretty and fun to watch. The other requirement was to make the lamp automatically switch on when the lights go off. In theory this was supposed to make her enjoy that moment. Unfortunately this part was only my wishful thinking.  
 
-Lamp independently changes intensity of all base colors (red, green and blue) of both LEDs, using the sine function to ease the light changes near the limiting values.
+The lamp independently changes intensity of all base colors (red, green and blue) of both LEDs, using the sine function to ease the light changes near the limiting values.
 
 ---
 
@@ -36,7 +36,7 @@ Lamp independently changes intensity of all base colors (red, green and blue) of
 
 ## Assembly
 
-I started with soldering the resistors to all color LEDs and the light sensor. Then after testing on prototype board, I've removed everything from the box and put on the side. Then I've checked how Arduino fits, and cut the holes for the power source (I'm using USB port). I've placed the LEDs so they will throw light towards the Arduino and used one piece removed from the box to hold them in place. There was no need for glue - board and parts fit in the box perfectly. I've cut a piece of old hotel card to make it slighty wider than the box. Then I've covered it with a kitchen foil to form a mirror. Reflection shouldn't be perfect, it's better if there are some distortions. Then I've bend the mirror to form a bow and placed it firmly inside the box.
+I started with soldering the resistors to all color LEDs and the light sensor. Then after testing on the prototype board, I've removed everything from the box and put it on the side. Then I've checked how Arduino fits inside, and cut the holes for the power source (I'm using USB port). I've placed the LEDs so they will throw light towards the Arduino and used one piece removed from the box to hold them in place. There was no need for glue - board and parts fit in the box perfectly. I've cut a piece of an old hotel card to make it slighty wider than the box. Then I've covered it with a kitchen foil to form a mirror. Reflection shouldn't be perfect, it's better if there are some distortions. Then I've bent the mirror to form a bow and placed it firmly inside the box.
 
 ![open box - view from the top](../img/aurora_lamp/2-construction.png)
 
@@ -56,7 +56,7 @@ Download the program from GitHub
 
 ```git clone git@github.com:zalun/AuroraLamp.git```
 
-Upload the file to Arduino device and all should be fine. But there are at least two things one could easily fiddle with.
+Upload the file to the Arduino device and all should be fine. But there are at least two things one could easily fiddle with.
 
 Lamp switches on when the ambient light level is below the value of `BRIGHT` which might be different depending on the area (street lamps).
 
