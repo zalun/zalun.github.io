@@ -1,6 +1,6 @@
 ---
 date: 04-21-2014
-title: Aurora lamp based on Arduino
+title: Creating Aurora night lamp
 preface: <img src="img/aurora_lamp/home-projection.png" alt="Aurora projection"/><br/>Aurora projected on the wall. Switches on automatically when it's dark. Build with Arduino and two RGB LEDs. 
 tags:
   - arduino
@@ -8,7 +8,7 @@ tags:
   - kids
 ---
 
-## Aurora lamp based on Arduino
+## <% this.get('title') %>
 
 ![result](../img/aurora_lamp/1-projection.png)
 

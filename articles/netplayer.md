@@ -1,6 +1,6 @@
 ---
 date: 04-20-2014
-title: NetPlayer based on RaspberryPi
+title: Building a hifi network music player
 preface: <img src="img/netplayer/home-player.png" alt="netplayer on the shelf"/><br/>Device navigated by smartphone app or hardware buttons. Plays music from network disc, internet radio and allows streaming from any Apple device via shAirPlay. All in one box. Quality? Up to 192kHz/24bit.
 tags:
   - raspberrypi
@@ -9,7 +9,7 @@ tags:
   - hardware
 ---
 
-## Network player based on RaspberryPi and Hifiberry
+## <% this.get('title') %>
 
 ![NetPlayer en face](../img/netplayer/on-shelf-face-4.png)
 
