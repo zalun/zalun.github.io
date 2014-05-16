@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Upgrading from Django 1.4.x to 1.6.x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../public/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../public/styles.css">
+    <link rel="stylesheet" href="./../public/prism/prism.css" />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="./../public/img/favicon.png" />
+</head>
+
+<body>
+    <div class="content">
+        <h2 id="backward-incompatible-changes">Backward incompatible changes</h2>
+        <p>After a short talk on <code class="language-javascript">#django</code> IRC channel I've decided to upgrade Django gradually - first to 1.5 and later to the latest 1.6 version</p>
+        <h3 id="-a-href-https-docs-djangoproject-com-en-1-5-releases-1-5-backwards-incompatible-changes-in-1-5-backward-incompatible-changes-in-1-5-a-"><a href="https://docs.djangoproject.com/en/1.5/releases/1.5/#backwards-incompatible-changes-in-1-5">Backward incompatible changes in 1.5</a></h3>
+        <p><a href="https://docs.djangoproject.com/en/1.6/ref/settings/#std:setting-ALLOWED_HOSTS">ALLOWED_HOSTS</a> setting is required for production site.</p>
+        <p><em>'url' requires a non-empty first argument. The syntax changed in Django 1.5, see the docs.</em>
+        </p>
+        <p>I've found <a href="http://stackoverflow.com/questions/14882491/django-release-1-5-url-requires-a-non-empty-first-argument-the-syntax-change">this on StackOverflow</a>
+            Linux:
+            <code class="language-javascript">find . -type f -print0 | xargs -0 sed -i 's/{% url \([^" >][^ >]*\)/{% url "\1"/g'</code>
+        </p>
+        <p>on OSX:
+            <code class="language-javascript">find . -type f -print0 | xargs -0 sed -i.bak -e 's/ url \([^" >][^ >]*\)/ url "\1"/g'</code>
+        </p>
+        <p>it will create backup files even if not changed...</p>
+        <p>There are also errors:</p>
+        <ul>
+            <li><code class="language-javascript">src="{{ url }}</code> in changed into <code class="language-javascript">src="{{ url "}}"</code>
+            </li>
+        </ul>
+        <h3 id="-a-href-https-docs-djangoproject-com-en-1-6-releases-1-6-backwards-incompatible-changes-in-1-6-backward-incompatible-changes-in-1-6-a-"><a href="https://docs.djangoproject.com/en/1.6/releases/1.6/#backwards-incompatible-changes-in-1-6">Backward incompatible changes in 1.6</a></h3>
+        <p>Some changes are by removing <a href="https://docs.djangoproject.com/en/1.6/internals/deprecation/">deprecated features</a>
+        </p>
+    </div>
+    <script src="./../public/prism/prism.js"></script>
+    <script src="./../public/scripts.js"></script>
+</body>
+
+</html>
