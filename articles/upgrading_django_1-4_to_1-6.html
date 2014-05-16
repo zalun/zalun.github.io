@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Upgrading from Django 1.4.x to 1.6.x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../themes/default/public/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../themes/default/public/styles.css">
+    <link rel="stylesheet" href="./../themes/default/public/prism/prism.css" />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' type='text/css'>
+</head>
+
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="col-main">
+                <h2 id="backward-incompatible-changes">Backward incompatible changes</h2>
+                <p>After a short talk on <code class="language-javascript">#django</code> IRC channel I've decided to upgrade Django gradually - first to 1.5 and later to the latest 1.6 version</p>
+                <h3 id="-a-href-https-docs-djangoproject-com-en-1-5-releases-1-5-backwards-incompatible-changes-in-1-5-backward-incompatible-changes-in-1-5-a-"><a href="https://docs.djangoproject.com/en/1.5/releases/1.5/#backwards-incompatible-changes-in-1-5">Backward incompatible changes in 1.5</a></h3>
+                <p><a href="https://docs.djangoproject.com/en/1.6/ref/settings/#std:setting-ALLOWED_HOSTS">ALLOWED_HOSTS</a> setting is required for production site.</p>
+                <p><em>'url' requires a non-empty first argument. The syntax changed in Django 1.5, see the docs.</em>
+                </p>
+                <p>I've found <a href="http://stackoverflow.com/questions/14882491/django-release-1-5-url-requires-a-non-empty-first-argument-the-syntax-change">this on StackOverflow</a>
+                    Linux:
+                    <code class="language-javascript">find . -type f -print0 | xargs -0 sed -i 's/{% url \([^" >][^ >]*\)/{% url "\1"/g'</code>
+                </p>
+                <p>on OSX:
+                    <code class="language-javascript">find . -type f -print0 | xargs -0 sed -i.bak -e 's/ url \([^" >][^ >]*\)/ url "\1"/g'</code>
+                </p>
+                <p>it will create backup files even if not changed...</p>
+                <p>There are also errors:</p>
+                <ul>
+                    <li><code class="language-javascript">src="{{ url }}</code> in changed into <code class="language-javascript">src="{{ url "}}"</code>
+                    </li>
+                </ul>
+                <h3 id="-a-href-https-docs-djangoproject-com-en-1-6-releases-1-6-backwards-incompatible-changes-in-1-6-backward-incompatible-changes-in-1-6-a-"><a href="https://docs.djangoproject.com/en/1.6/releases/1.6/#backwards-incompatible-changes-in-1-6">Backward incompatible changes in 1.6</a></h3>
+                <p>Some changes are by removing <a href="https://docs.djangoproject.com/en/1.6/internals/deprecation/">deprecated features</a>
+                </p>
+            </div>
+            <div class="col-sidebar">
+                <section class="about">
+                    <a href="./../"><strong>Hacking around</strong></a>
+                    by zalun <a href="https://twitter.com/zalun">t</a>  <a href="https://facebook.com/zaloon">f</a>
+                </section>
+
+                <hr>
+                <section class="latest_posts">
+                    <small>Latest blog posts:</small>
+                    <br />
+                    <p><a href="./../articles/auroralamp.html"><i class="fa fa-check"></i> Creating Aurora night lamp</a>
+                    </p>
+                    <p><a href="./../articles/netplayer.html"><i class="fa fa-check"></i> Building a hifi network music player</a>
+                    </p>
+
+                </section>
+
+                <hr>
+                <section class="discussion">
+                    <small>Internet trail</small>
+                    Not supported yet
+                </section>
+
+
+                <hr>
+                <section class="tags">
+                    <small>Tags:</small>
+                    <br />
+                    <a href="./../tags/kids.html">kids</a>
+                    <a href="./../tags/arduino.html">Arduino</a>
+                    <a href="./../tags/raspberrypi.html">RaspberryPi</a>
+                    <a href="./../tags/hardware.html">hardware</a>
+                    <a href="./../tags/audio.html">Audio</a>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <p><a href="./../"><i class="fa fa-home"></i> Home</a>
+                <a href="./../all.html"><i class="fa fa-list-ul"></i> All articles</a>
+            </p>
+            <p class="techy">Made with <a href="https://github.com/krasimir/techy" target="_blank">techy</a>
+            </p>
+        </footer>
+    </div>
+    <script src="./../themes/default/public/prism/prism.js"></script>
+    <script src="./../themes/default/public/scripts.js"></script>
+</body>
+
+</html>
