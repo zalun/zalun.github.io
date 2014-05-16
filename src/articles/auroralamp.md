@@ -1,7 +1,7 @@
 ---
 date: 04-21-2014
 title: Creating Aurora night lamp
-preface: <img src="{siteURL}img/aurora_lamp/home-projection.png" alt="Aurora projection"/><br/>Aurora projected on the wall. Switches on automatically when it's dark. Build with Arduino and two RGB LEDs. 
+preface: <img src="{imgURL}/aurora_lamp/home-projection.png" alt="Aurora projection"/><br/>Aurora projected on the wall. Switches on automatically when it's dark. Build with Arduino and two RGB LEDs. 
 tags:
   - arduino
   - hardware
@@ -10,7 +10,7 @@ tags:
 
 ## <% this.get('title') %>
 
-![result](../img/aurora_lamp/1-projection.png)
+![result](../public/img/aurora_lamp/1-projection.png)
 
 I had this idea in mind for a while, but it took me some time to find the right solution. My child is happier when the room is slightly lit during the night. I wanted to build something which will not only provide light, but also be pretty and fun to watch. The other requirement was to make the lamp automatically switch on when the lights go off. In theory this was supposed to make her enjoy that moment. Unfortunately this part was only my wishful thinking.  
 
@@ -20,7 +20,7 @@ The lamp independently changes intensity of all base colors (red, green and blue
 
 ## Parts
 
-![board design](../img/aurora_lamp/0-schema.png)
+![board design](../public/img/aurora_lamp/0-schema.png)
 
 * Arduino board
 * 2 x RGB LEDs
@@ -38,15 +38,15 @@ The lamp independently changes intensity of all base colors (red, green and blue
 
 I started with soldering the resistors to all color LEDs and the light sensor. Then after testing on the prototype board, I've removed everything from the box and put it on the side. Then I've checked how Arduino fits inside, and cut the holes for the power source (I'm using USB port). I've placed the LEDs so they will throw light towards the Arduino and used one piece removed from the box to hold them in place. There was no need for glue - board and parts fit in the box perfectly. I've cut a piece of an old hotel card to make it slighty wider than the box. Then I've covered it with a kitchen foil to form a mirror. Reflection shouldn't be perfect, it's better if there are some distortions. Then I've bent the mirror to form a bow and placed it firmly inside the box.
 
-![open box - view from the top](../img/aurora_lamp/2-construction.png)
+![open box - view from the top](../public/img/aurora_lamp/2-construction.png)
 
 Reflected light is projected on to the wall through a small window.
 
-![projection window](../img/aurora_lamp/4-box-top.jpg)
+![projection window](../public/img/aurora_lamp/4-box-top.jpg)
 
 Some decoration created by the target audience made a usable product from the prototype.
 
-![happy kid](../img/aurora_lamp/6-happykid.png)
+![happy kid](../public/img/aurora_lamp/6-happykid.png)
 
 ---
 
