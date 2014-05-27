@@ -13,7 +13,7 @@ tags:
 
 ![NetPlayer en face](../img/netplayer/on-shelf-face-4.png)
 
-I use a turntable for most of the time, but sometimes using it is just a hassle. Getting up every 20 minutes to play music while working is no fun. Another need expressed by Gosia is internet radio. I researched external DACs for RaspberryPi, but there was (is?) issue with IO on rPi. I was even considering buying Mac Mini, but the price is way too high also for the used devices. Then I found <a href="http://www.hifiberry.com/" target="_blank">Hifiberry</a> - a DAC capable of playing 192kHz/24bit which connects directly to the I2S slot in RaspberryPi.  Exactly what I was looking for. Non expensive (the all together cost including shipping, case and all parts was about 80GBP), high quality DIY device. And, believe me it does work well with an amplifier from 90's.
+I use a turntable most of the time, but sometimes using it is just a hassle. Getting up every 20 minutes to play music while working is no fun. Another need expressed by Gosia is an internet radio. I researched external DACs for RaspberryPi, but there was (is?) an issue with IO on rPi. I was even considering to buy a Mac Mini, but the price is way too high even for the used devices. Then I found <a href="http://www.hifiberry.com/" target="_blank">Hifiberry</a> - a DAC capable of playing 192kHz/24bit which connects directly to the I2S slot in RaspberryPi.  Exactly what I was looking for. Non expensive (the all together cost including shipping, case and all parts was about 80GBP), high quality DIY device. And, believe me, it does work well with an amplifier from the 90's.
 
 ---
 
@@ -21,15 +21,15 @@ I use a turntable for most of the time, but sometimes using it is just a hassle.
 
 ### Plays from a playlist
 
-After some research on Linux distribution I have chosen <a href="http://volumio.org/" target="_blank">Volumio</a> as it uses <a href="http://www.musicpd.org/" target="_blank">MPD</a> and is advertising as a weapon for audiophiles. Volumio is also working with Hifiberry with almost out of the box. It was a pleasent surprise to find it runing ``shairport``, a server to stream from Apple devices.
+After doing some research on the Linux distribution I have chosen <a href="http://volumio.org/" target="_blank">Volumio</a> as it uses <a href="http://www.musicpd.org/" target="_blank">MPD</a> and is advertising as a weapon for audiophiles. Volumio is also working with Hifiberry almost out of the box. It was a pleasant surprise to find it running ``shairport``, a server to stream from Apple devices.
 
 ### Plays Internet Radio
 
-We often listen to "Trójka", known Polish public radio station. Unfortunately it uses some strange codec which makes it unplayable under MPD. I've decided to use <a href="http://mplayerhq.hu" target="_blank">Mplayer</a>.
+We often listen to "Trójka", a known Polish public radio station. Unfortunately it uses some strange codec which makes it unplayable under MPD. I've decided to use <a href="http://mplayerhq.hu" target="_blank">Mplayer</a> instead.
 
 ### Plays music test files
 
-What's the fun of owning a DIY network player if one can't take it and test how it sound on your friend's system? I have some space on SD where I copied few files. No need to connect to the (possibly unsafe) local network.
+What's the fun of owning a DIY network player if you can't take it and test how it sounds on your friend's system? I have some space on SD where I've copied a few files. No need to connect to the (possibly unsafe) local network.
 
 ---
 
@@ -37,15 +37,15 @@ What's the fun of owning a DIY network player if one can't take it and test how 
 
 ![buttons](../img/netplayer/buttons.png)
 
-Device has four buttons. ``stop`` / ``radio`` / ``music`` / ``test``
+The device has four buttons. ``stop`` / ``radio`` / ``music`` / ``test``
 
-If this works for you as well feel free to download the software from https://github.com/zalun/NetPlayer.
+If this works for you as well, feel free to download the software from https://github.com/zalun/NetPlayer.
 
-<blockquote>I've made a choice to not switch off the device on a usual basis, I can always run <i>ssh</i> and <i>halt</i> it from the terminal. This however might change in the future, I'm considering adding a button on the back panel.</blockquote>
+<blockquote>I've made a choice not to switch off the device at a usual basis, I can always run <i>ssh</i> and <i>halt</i> it from the terminal. This however might change in the future, as I'm considering adding a button on the back panel.</blockquote>
 
 ### Stop
 
-Stops all music playing clients and restarts ``shairport``. Stops everything even if it wasn't run by pressing a button.
+Stops all music playing clients and restarts ``shAirport``. Stops everything even if it hasn't been run by pressing a button.
 
 ### Radio
 
@@ -53,7 +53,7 @@ Stations are defined in ``settings.py``. Depending on the current state pressing
 
 ### Music
 
-Plays current song or switches to the next one in playlist. Note that this assumes that a playlist has been created using an MPD client on a different device.
+Plays current song or switches to the next one in the playlist. Note that this assumes that a playlist has been created using an MPD client on a different device.
 
 ### Test
 
@@ -69,7 +69,7 @@ Hearing that the standard impulse power source isn't so good for sound I bought 
 
 ![Prototype board](../img/netplayer/prototype-board-1.png)
 
-First I've build a prototype using a prototype board. After it worked well for a week or so, I've ordered the boxes (I bought the cheapest from <a href="http://modushop.pl/" target="_blank">Modushop</a> for about &pound;10 each).
+First I've built a prototype using a prototype board. After it worked well for a week or so, I've ordered the boxes (I bought the cheapest from <a href="http://modushop.pl/" target="_blank">Modushop</a> for about &pound;10 each).
 
 ![RCA](../img/netplayer/open-4-back.png)
 
