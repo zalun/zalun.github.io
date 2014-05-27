@@ -19,35 +19,35 @@
                 <p>
                     <img src="../img/netplayer/on-shelf-face-4.png" alt="NetPlayer en face">
                 </p>
-                <p>I use a turntable for most of the time, but sometimes using it is just a hassle. Getting up every 20 minutes to play music while working is no fun. Another need expressed by Gosia is internet radio. I researched external DACs for RaspberryPi,
-                    but there was (is?) issue with IO on rPi. I was even considering buying Mac Mini, but the price is way too high also for the used devices. Then I found <a href="http://www.hifiberry.com/" target="_blank">Hifiberry</a> - a DAC capable
+                <p>I use a turntable most of the time, but sometimes using it is just a hassle. Getting up every 20 minutes to play music while working is no fun. Another need expressed by Gosia is an internet radio. I researched external DACs for RaspberryPi,
+                    but there was (is?) an issue with IO on rPi. I was even considering to buy a Mac Mini, but the price is way too high even for the used devices. Then I found <a href="http://www.hifiberry.com/" target="_blank">Hifiberry</a> - a DAC capable
                     of playing 192kHz/24bit which connects directly to the I2S slot in RaspberryPi. Exactly what I was looking for. Non expensive (the all together cost including shipping, case and all parts was about 80GBP), high quality DIY device.
-                    And, believe me it does work well with an amplifier from 90's.</p>
+                    And, believe me, it does work well with an amplifier from the 90's.</p>
                 <hr>
                 <h2 id="requirements">Requirements</h2>
                 <h3 id="plays-from-a-playlist">Plays from a playlist</h3>
-                <p>After some research on Linux distribution I have chosen <a href="http://volumio.org/" target="_blank">Volumio</a> as it uses <a href="http://www.musicpd.org/" target="_blank">MPD</a> and is advertising as a weapon for audiophiles. Volumio
-                    is also working with Hifiberry with almost out of the box. It was a pleasent surprise to find it runing <code class="language-javascript">shairport</code>, a server to stream from Apple devices.</p>
+                <p>After doing some research on the Linux distribution I have chosen <a href="http://volumio.org/" target="_blank">Volumio</a> as it uses <a href="http://www.musicpd.org/" target="_blank">MPD</a> and is advertising as a weapon for audiophiles.
+                    Volumio is also working with Hifiberry almost out of the box. It was a pleasant surprise to find it running <code class="language-javascript">shairport</code>, a server to stream from Apple devices.</p>
                 <h3 id="plays-internet-radio">Plays Internet Radio</h3>
-                <p>We often listen to "Trójka", known Polish public radio station. Unfortunately it uses some strange codec which makes it unplayable under MPD. I've decided to use <a href="http://mplayerhq.hu" target="_blank">Mplayer</a>.</p>
+                <p>We often listen to "Trójka", a known Polish public radio station. Unfortunately it uses some strange codec which makes it unplayable under MPD. I've decided to use <a href="http://mplayerhq.hu" target="_blank">Mplayer</a> instead.</p>
                 <h3 id="plays-music-test-files">Plays music test files</h3>
-                <p>What's the fun of owning a DIY network player if one can't take it and test how it sound on your friend's system? I have some space on SD where I copied few files. No need to connect to the (possibly unsafe) local network.</p>
+                <p>What's the fun of owning a DIY network player if you can't take it and test how it sounds on your friend's system? I have some space on SD where I've copied a few files. No need to connect to the (possibly unsafe) local network.</p>
                 <hr>
                 <h2 id="logic">Logic</h2>
                 <p>
                     <img src="../img/netplayer/buttons.png" alt="buttons">
                 </p>
-                <p>Device has four buttons. <code class="language-javascript">stop</code> / <code class="language-javascript">radio</code> / <code class="language-javascript">music</code> / <code class="language-javascript">test</code>
+                <p>The device has four buttons. <code class="language-javascript">stop</code> / <code class="language-javascript">radio</code> / <code class="language-javascript">music</code> / <code class="language-javascript">test</code>
                 </p>
-                <p>If this works for you as well feel free to download the software from <a href="https://github.com/zalun/NetPlayer">https://github.com/zalun/NetPlayer</a>.</p>
-                <blockquote>I've made a choice to not switch off the device on a usual basis, I can always run <i>ssh</i> and <i>halt</i> it from the terminal. This however might change in the future, I'm considering adding a button on the back panel.</blockquote>
+                <p>If this works for you as well, feel free to download the software from <a href="https://github.com/zalun/NetPlayer">https://github.com/zalun/NetPlayer</a>.</p>
+                <blockquote>I've made a choice not to switch off the device at a usual basis, I can always run <i>ssh</i> and <i>halt</i> it from the terminal. This however might change in the future, as I'm considering adding a button on the back panel.</blockquote>
 
                 <h3 id="stop">Stop</h3>
-                <p>Stops all music playing clients and restarts <code class="language-javascript">shairport</code>. Stops everything even if it wasn't run by pressing a button.</p>
+                <p>Stops all music playing clients and restarts <code class="language-javascript">shAirport</code>. Stops everything even if it hasn't been run by pressing a button.</p>
                 <h3 id="radio">Radio</h3>
                 <p>Stations are defined in <code class="language-javascript">settings.py</code>. Depending on the current state pressing the button is either playing latest played station or switching to the next one on the list.</p>
                 <h3 id="music">Music</h3>
-                <p>Plays current song or switches to the next one in playlist. Note that this assumes that a playlist has been created using an MPD client on a different device.</p>
+                <p>Plays current song or switches to the next one in the playlist. Note that this assumes that a playlist has been created using an MPD client on a different device.</p>
                 <h3 id="test">Test</h3>
                 <p>Files are read from the directory specified in <code class="language-javascript">settings.py</code>. Again - Plays current song or switches to the next one.</p>
                 <hr>
@@ -61,7 +61,7 @@
                 <p>
                     <img src="../img/netplayer/prototype-board-1.png" alt="Prototype board">
                 </p>
-                <p>First I've build a prototype using a prototype board. After it worked well for a week or so, I've ordered the boxes (I bought the cheapest from <a href="http://modushop.pl/" target="_blank">Modushop</a> for about &pound;10 each).</p>
+                <p>First I've built a prototype using a prototype board. After it worked well for a week or so, I've ordered the boxes (I bought the cheapest from <a href="http://modushop.pl/" target="_blank">Modushop</a> for about &pound;10 each).</p>
                 <p>
                     <img src="../img/netplayer/open-4-back.png" alt="RCA">
                 </p>
