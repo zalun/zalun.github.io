@@ -10,6 +10,8 @@ tags:
 
 ## <% this.get('title') %>
 
+*This is an actual image of the light projected by the lamp.*
+
 ![result](../img/aurora_lamp/1-projection.png)
 
 I had this idea in mind for a while, but it took me some time to find the right solution. My child is happier when the room is slightly lit during the night. I wanted to build something which will not only provide light, but also be pretty and fun to watch. The other requirement was to make the lamp automatically switch on when the lights go off. In theory this was supposed to make her enjoy that moment. Unfortunately this part was only my wishful thinking.  
