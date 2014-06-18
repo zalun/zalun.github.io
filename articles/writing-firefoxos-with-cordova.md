@@ -57,7 +57,7 @@ Create and prepare an app using geolocation.
 
 ![hello world](../img/talk-budapest/13-helloworld.png)
 
-I've shown a demo where I created an app rand un it.
+I've shown a demo where I created an app run it.
 
 ![app manager](../img/talk-budapest/14-app-manager.png)
 
