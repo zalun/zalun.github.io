@@ -31,5 +31,8 @@ noSave: true
 	<a href="<% linkto('arduino') %>">Arduino</a>
 	<a href="<% linkto('raspberrypi') %>">RaspberryPi</a>
 	<a href="<% linkto('hardware') %>">hardware</a>
-	<a href="<% linkto('audio') %>">Audio</a>
+	<a href="<% linkto('audio') %>">audio</a>
+	<a href="<% linkto('mozilla') %>">Mozilla</a>
+	<a href="<% linkto('firefoxos') %>">Firefox OS</a>
+	<a href="<% linkto('code') %>">code</a>
 </section>

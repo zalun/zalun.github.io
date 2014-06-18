@@ -1,6 +1,6 @@
 ---
-name: arduino
+name: mozilla
 ---
-# Arduino
+# Mozilla
 
-<% listbytag('arduino') %>
+<% listbytag('mozilla') %>
