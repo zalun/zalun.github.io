@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Writing FirefoxOS apps with Cordova</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../themes/default/public/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../themes/default/public/styles.css">
+    <link rel="stylesheet" href="./../themes/default/public/prism/prism.css" />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' type='text/css'>
+</head>
+
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="col-main">
+                <h2 id="-this-get-title-">Writing FirefoxOS apps with Cordova</h2>
+                <p>
+                    <img src="../img/talk-budapest/01-title.png" alt="title">
+                    <img src="../img/talk-budapest/02-wepapps-intro.png" alt="webapps intro">
+                </p>
+                <p><a href="https://developer.mozilla.org/en-US/Apps/Quickstart/Build/Intro_to_open_web_apps" target="_blank">MDN - Intro to Open Web Apps</a> 
+                </p>
+                <p>
+                    <img src="../img/talk-budapest/03-manifest.png" alt="manifest">
+                </p>
+                <p>Given that webapps are web sites with a manifest, here is what it looks like.
+                    <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest" target="_blank">MDN - Manifest</a>
+                </p>
+                <p>
+                    <img src="../img/talk-budapest/04-hosted.png" alt="hosted">
+                </p>
+                <p>There are few types of apps. One of these is <em>hosted</em> apps. Technically that is an HTML on the web whith a manifest and install page. This gives the developer an ability to provide an app to users without having it updated to Marketplace.
+                    <a
+                    href="https://developer.mozilla.org/en-US/Marketplace/Options/Hosted_apps" target="_blank">MDN - Hosted Apps</a>
+                </p>
+                <p>
+                    <img src="../img/talk-budapest/05-hosted-apis.png" alt="hosted APIs">
+                </p>
+                <p>This solution limits the APIs which might be used. The list above might not be actual. <a href="https://hacks.mozilla.org/2013/02/using-webapis-to-make-the-web-layer-more-capable/" target="_blank">Using WebAPIs to make the web layer more capable</a>.</p>
+                <p>
+                    <img src="../img/talk-budapest/06-packaged.png" alt="packaged">
+                </p>
+                <p>Packaged app might be simply a hosted app packed using zip. This can be uploaded to Marketplace reviewed and downloaded by users. There is some access to the device which hosted apps don't have - in example Gallery. <a href="https://developer.mozilla.org/en-US/Marketplace/Options/Packaged_apps"
+                    target="_blank">MDN - Packaged apps</a>, <a href="https://developer.mozilla.org/en-US/Marketplace/Options/Packaged_or_hosted_" target="_blank">Packaged or hosted?</a>
+                </p>
+                <p>
+                    <img src="../img/talk-budapest/07-privileged.png" alt="privileged">
+                </p>
+                <p>Privileged apps are made by adding <code class="language-javascript">"type": "privileged"</code> to the app manifest. These apps are a subject of <a href="https://developer.mozilla.org/en-US/Apps/CSP" target="_blank">Content Security Protection</a> which
+                    limits the way one writes an app. The only real consideration is that inline JavaScript is forbidden. Place all JavaScript in a separate file. Isn't this a good practice anyway?</p>
+                <p>
+                    <img src="../img/talk-budapest/08-privileged-apis.png" alt="privileged APIs">
+                </p>
+                <p>Privileged apps have access to more APIs. And there is more to come!</p>
+                <p>
+                    <img src="../img/talk-budapest/09-what-is-cordova.png" alt="what is Cordova">
+                </p>
+                <p><a href="http://cordova.apache.org/" target="_blank">Apache Cordova</a> is a platform for building native mobile applications using HTML5. It is used by many projects like <a href="http://phonegap.com/" blank="_blank">PhoneGap</a> or <a href="http://ionicframework.com/"
+                    target="_blank">Ionic</a> which expand it's features.</p>
+                <p>
+                    <img src="../img/talk-budapest/10-purpose.png" alt="Cordova purpose">
+                </p>
+                <p>The purpose is HTML5 to become de facto platform for writing web apps.</p>
+                <p>
+                    <img src="../img/talk-budapest/11-not-perfect.png" alt="not perfect">
+                </p>
+                <p>Cordova is not perfect, there are differences in implementation of the APIs across platforms. Writing an advanced app using few APIs might not be exactly <code class="language-javascript">cordova build ios firefoxos</code>, there would
+                    be some additional work to prepare it to work on all desired platforms.</p>
+                <p>
+                    <img src="../img/talk-budapest/12-cordova-app.png" alt="Cordova app">
+                </p>
+                <p>Create and prepare an app using geolocation.</p>
+                <p>
+                    <img src="../img/talk-budapest/13-helloworld.png" alt="hello world">
+                </p>
+                <p>I've shown a demo where I created an app rand un it.</p>
+                <p>
+                    <img src="../img/talk-budapest/14-app-manager.png" alt="app manager">
+                </p>
+                <p>A continuation of the demo above including a presentation of App Manager debugging and editing features.</p>
+                <p>
+                    <img src="../img/talk-budapest/15-brick.png" alt="brick">
+                </p>
+                <p><a href="http://mozilla.github.io/brick/" target="_blank">Brick</a> is based on X-Tags. It's a set of UI tools (flipbox, calendar, etc.) which make work on HTML5 an easy task.</p>
+                <p>
+                    <img src="../img/talk-budapest/16-jsfiddle.png" alt="JSFiddle">
+                </p>
+                <p><a href="http://jsfiddle.net" target="_blank">JSFiddle</a> is a sandbox for developers. Creating a simple HTML5 example is very straight forward. After saving it add <code class="language-javascript">/manifest.webapp</code> to given URL and
+                    you can install it in App Manager.</p>
+                <p>
+                    <img src="../img/talk-budapest/17-flambe.png" alt="Flambe">
+                </p>
+                <p>There are others cross platform tools to create webapps. Some of them, like <a href="https://github.com/aduros/flambe" target="_blank">Flambe</a> are for creating games.</p>
+                <p>
+                    <img src="../img/talk-budapest/18-flambe-2.png" alt="Flambe">
+                </p>
+                <p>Flambe uses Haxe a language created for making games. It has built in support for physics. It is used by Nickelodeon and others.</p>
+                <p>
+                    <img src="../img/talk-budapest/19-site.png" alt="Mozilla-Cordova site">
+                </p>
+                <p>Please take a look at our site at <a href="http://mozilla-cordova.github.io/" target="_blank">our GitHub page</a> to current status of the implementation and information how to participate.</p>
+                <p>
+                    <img src="../img/talk-budapest/20-status.png" alt="Mozilla-Cordova status">
+                </p>
+                <p>We do update the information about the plugins development.</p>
+                <p>
+                    <img src="../img/talk-budapest/21-questions.png" alt="Questions">
+                </p>
+            </div>
+            <div class="col-sidebar">
+                <section class="about">
+                    <a href="./../"><strong>Hacking around</strong></a>
+                    by zalun <a href="https://twitter.com/zalun">t</a>  <a href="https://facebook.com/zaloon">f</a>
+                </section>
+
+                <hr>
+                <section class="latest_posts">
+                    <small>Latest blog posts:</small>
+                    <br />
+                    <p><a href="./../articles/writing-firefoxos-with-cordova.html"><i class="fa fa-check"></i> Writing FirefoxOS apps with Cordova</a>
+                    </p>
+                    <p><a href="./../articles/auroralamp.html"><i class="fa fa-check"></i> Creating Aurora night lamp</a>
+                    </p>
+                    <p><a href="./../articles/netplayer.html"><i class="fa fa-check"></i> Building a hifi network music player</a>
+                    </p>
+
+                </section>
+
+                <hr>
+                <section class="discussion">
+                    <small>Internet trail</small>
+                    Not supported yet
+                </section>
+
+
+                <hr>
+                <section class="tags">
+                    <small>Tags:</small>
+                    <br />
+                    <a href="./../tags/kids.html">kids</a>
+                    <a href="./../tags/mozilla.html">Arduino</a>
+                    <a href="./../tags/raspberrypi.html">RaspberryPi</a>
+                    <a href="./../tags/hardware.html">hardware</a>
+                    <a href="./../tags/audio.html">audio</a>
+                    <a href="./../tags/arduino.html">Mozilla</a>
+                    <a href="./../tags/firefoxos.html">Firefox OS</a>
+                    <a href="./../tags/code.html">code</a>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <p><a href="./../"><i class="fa fa-home"></i> Home</a>
+                <a href="./../all.html"><i class="fa fa-list-ul"></i> All articles</a>
+            </p>
+            <p class="techy">Made with <a href="https://github.com/krasimir/techy" target="_blank">techy</a>
+            </p>
+
+            <script>
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-9730604-2', 'zalewa.info');
+                ga('send', 'pageview');
+            </script>
+        </footer>
+    </div>
+    <script src="./../themes/default/public/prism/prism.js"></script>
+    <script src="./../themes/default/public/scripts.js"></script>
+</body>
+
+</html>
